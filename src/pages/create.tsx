@@ -1,0 +1,24 @@
+"use client";
+import React, { useState, useEffect } from "react";
+import OrderForm from "../components/OrderForms";
+
+const Home: React.FC = () => {
+  const createOrder = async (newOrder: any) => {
+    await fetch("http://localhost:3000/api/orders", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(newOrder),
+    });
+  };
+
+  return (
+    <div className="App">
+      <h1>Order Management App</h1>
+      <OrderForm onCreateOrder={createOrder} />
+    </div>
+  );
+};
+
+export default Home;
