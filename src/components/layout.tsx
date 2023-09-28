@@ -10,9 +10,9 @@ export default function RootLayout({
 }) {
   const [fontClassName] = useFont();
   return (
-    <body className={fontClassName}>
+    <main className={fontClassName}>
       <NavBar />
       {children}
-    </body>
+    </main>
   );
 }

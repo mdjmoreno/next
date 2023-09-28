@@ -5,16 +5,16 @@ const NavBar = () => {
  
 
   return (
-    <nav className='flex'>
-      <ul className=''>
-        <li>
-          <Link href="/home">CreateOrder</Link>
-        </li>
-        <li>
-          <Link href="/orders">Orders</Link>
-        </li>
-      </ul>
-    </nav>
+    <nav className="bg-blue-500 p-4">
+    <ul className="flex space-x-4">
+      <li>
+        <Link href="/create">Create Order</Link>
+      </li>
+      <li>
+        <Link href="/list">Orders</Link>
+      </li>
+    </ul>
+  </nav>
   );
 };
 
